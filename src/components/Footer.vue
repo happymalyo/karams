@@ -7,7 +7,7 @@
       >
         <!-- Branding -->
         <div>
-          <h3 class="text-gray-800 font-bold text-lg">Mada Company Finder</h3>
+          <h3 class="text-gray-800 font-bold text-lg">E S N & K A R A M A</h3>
           <p class="mt-4 text-sm">
             Trouvez facilement des entreprises à Madagascar, dans divers
             secteurs, grâce à notre plateforme intuitive.
@@ -51,7 +51,7 @@
         class="mt-6 flex flex-col md:flex-row items-center justify-between text-sm"
       >
         <p class="text-gray-500">
-          Copyright © 2024 Mada Company Finder. Tous droits réservés.
+          Copyright © 2024 ESN 1 KARAMA. Tous droits réservés.
         </p>
         <div class="mt-4 md:mt-0 flex items-center space-x-4">
           <!-- Light/Dark Mode Placeholder -->

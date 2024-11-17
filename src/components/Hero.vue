@@ -21,26 +21,28 @@ defineProps({
       <p
         class="px-4 py-1 mb-6 text-sm font-medium text-blue-600 bg-blue-100 rounded-full inline-block"
       >
-        Made with ❤️ by Kely Karama →
+        Ce site n'est pas forcement une bonne référence
       </p>
       <!-- Main Heading -->
       <h1 class="text-4xl font-bold text-gray-800 md:text-5xl">
-        Trouvez l'ESN 
-        <span class="text-[#FF6500] font-semibold"> Tsara Karama</span> à
-        Madagascar <br/>
-        <span class="text-center text-3xl">Développeur Junior ? Ou Stagaire ...?</span>
+        L <font-awesome-icon icon="rocket" />s ESN
+        <span class="text-[#FF6500] font-semibold text-balance mb-9">
+          Tsara Karama</span
+        >
+        à Madagascar<br />
+        <span class="text-center text-3xl"
+          >Développeur Full Snack ? UI / Obelix Designer ?</span
+        >
       </h1>
       <!-- Description -->
-      <p class="mt-4 text-gray-600 md:text-lg">
-        Découvrez les meilleures entreprises dans divers secteurs à Madagascar <br />
-        Nous vous aidons à trouver des emplois bien rémunérés adaptés à vos
-        compétences.
+      <p class="mt-4 text-gray-600 md:text-lg text-balance">
+        Découvrez les meilleures entreprises de service numérique bien remuneré<br />
       </p>
       <!-- Search Bar -->
       <div class="w-full max-w-lg mt-6">
         <input
           type="text"
-          placeholder="Search for tech..."
+          placeholder="Rechercher un esn.."
           class="w-full px-4 py-3 text-gray-800 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
@@ -89,6 +91,12 @@ defineProps({
         <p class="mt-2 text-sm text-gray-600">
           Developing applications that work across multiple platforms with one
           codebase.
+        </p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-lg font-semibold text-gray-800">UI/UX Design</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          DWeb Design and User Expérience
         </p>
       </div>
     </div>

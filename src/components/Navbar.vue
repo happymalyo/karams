@@ -1,11 +1,5 @@
 <script setup>
-import { RouterLink, useRoute } from "vue-router";
-import logo from "@/assets/logo.jpg";
-
-const isActiveLink = (routePath) => {
-  const route = useRoute();
-  return route.path === routePath;
-};
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
@@ -14,20 +8,21 @@ const isActiveLink = (routePath) => {
       <!-- Logo Section -->
       <div class="flex items-center space-x-2">
         <img src="https://via.placeholder.com/40" alt="Logo" class="h-10" />
-        <a href="#" class="text-2xl font-bold text-[#3D5300]"
-          >Mada ESN Finder.</a
-        >
+        <RouterLink to="/" class="text-2xl font-bold text-[#3D5300]">
+          E S N <span class="text-[#F18C2D]">& K A </span>R A M A
+        </RouterLink>
       </div>
 
       <!-- Navigation Links -->
       <nav class="flex items-center space-x-6">
         <ul class="flex space-x-6">
           <li>
-            <a
-              href="#products"
+            <RouterLink
+              to="/jobs"
               class="text-lg hover:text-[#F18C2D] transition duration-300"
-              >Tous les ESN</a
             >
+              Explorer
+            </RouterLink>
           </li>
         </ul>
 
@@ -36,13 +31,15 @@ const isActiveLink = (routePath) => {
           <a
             href="#login"
             class="px-6 py-2 bg-[#3D5300] text-white font-semibold rounded hover:bg-[#d17624] transition duration-300"
-            >Login</a
+            >Sign in</a
           >
-          <a
-            href="#signup"
-            class="px-6 py-2 border border-[#3D5300] text-[#3D5300] font-semibold rounded hover:bg-[#F18C2D] hover:text-white transition duration-300"
-            >Sign Up</a
+          <RouterLink
+            to="/add-jobs"
+            class="px-6 py-2 border border-[#3D5300] text-[#3D5300] font-semibold rounded hover:bg-[#F18C2D] hover:text-white hover:border-none transition duration-300"
           >
+            <font-awesome-icon :icon="['fas', 'plus-circle']" />
+            Ajouter un ESN
+          </RouterLink>
         </div>
       </nav>
     </div>
