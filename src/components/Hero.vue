@@ -8,7 +8,7 @@ import CompaniesView from "@/views/CompaniesView.vue";
         <div class="flex flex-col items-center px-6 py-20 text-center md:px-12">
             <!-- Tagline -->
             <p
-                class="px-4 py-1 mb-6 text-sm font-medium text-white rounded-full inline-block"
+                class="px-4 py-1 mb-6 text-xs font-medium text-white bg-gradient-to-r from-slate-90 shadow shadow-sky-500 via-black to-gray-900 rounded-md inline-block"
             >
                 Ce site n'est pas forcement une bonne référence
             </p>

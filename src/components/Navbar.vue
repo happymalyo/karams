@@ -29,7 +29,7 @@ import { RouterLink } from "vue-router";
                         >Se connecter</a
                     >
                     <RouterLink
-                        to="/add-jobs"
+                        to="/add-company"
                         class="px-6 py-2 border border-[#d17624] text-white font-semibold rounded hover:bg-[#d17624] hover:text-white hover:border-none transition duration-300"
                     >
                         <font-awesome-icon :icon="['fas', 'plus-circle']" />
