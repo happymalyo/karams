@@ -14,7 +14,7 @@ import CompaniesView from "@/views/CompaniesView.vue";
             </p>
             <!-- Main Heading -->
             <h1 class="text-4xl font-bold text-white md:text-5xl mt-10">
-                L <font-awesome-icon icon="rocket" />s ESN
+                <font-awesome-icon icon="rocket" />SN
                 <span class="text-[#d17624] font-semibold text-balance mb-9">
                     Tsara Karama</span
                 >

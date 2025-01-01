@@ -8,11 +8,22 @@ const props = defineProps({
 
 <template>
     <div
-        class="bg-gradient-to-r from-gray-900 via-black to-gray-900 p-6 rounded-lg shadow-lg"
+        class="bg-gradient-to-r from-gray-900 via-black to-gray-900 p-6 rounded-lg shadow-lg border border-slate-800"
     >
         <!-- Card Header -->
         <div class="flex items-center justify-between p-2 text-white">
-            <img :src="company.logo_url" alt="Company Logo" class="h-10 w-20" />
+            <div class="flex items-center space-x-3">
+                <img
+                    :src="company.logo_url"
+                    alt="Company Logo"
+                    class="h-10 w-20"
+                />
+                <img
+                    src="https://via.placeholder.com/40"
+                    alt="User Avatar"
+                    class="h-10 rounded-full"
+                />
+            </div>
             <a
                 :href="company.contact.website"
                 class="border border-slate-700 p-2 rounded-s-full text-sm text-slate-400"
