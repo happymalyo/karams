@@ -1,14 +1,6 @@
-# ESN 1 KARAMA
+# ESN & KARAMA
 
-TThe best place to find a IT Job in Madagascar
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+The best place to find a IT Job in Madagascar
 
 ## Project Setup
 

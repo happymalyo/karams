@@ -5,7 +5,9 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <Navbar />
-  <RouterView />
-  <Footer />
+    <div class="bg-gradient-to-r from-gray-900 via-black to-gray-900">
+        <Navbar />
+        <RouterView />
+        <Footer />
+    </div>
 </template>

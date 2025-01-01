@@ -1,104 +1,44 @@
 <script setup>
-import { defineProps } from "vue";
-
-defineProps({
-  title: {
-    type: String,
-    default: "Become a Vue Dev",
-  },
-  subtitle: {
-    type: String,
-    default: "Find the Vue job that fits your skills and needs",
-  },
-});
+import CompaniesView from "@/views/CompaniesView.vue";
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-100">
-    <!-- Hero Section -->
-    <div class="flex flex-col items-center px-6 py-20 text-center md:px-12">
-      <!-- Tagline -->
-      <p
-        class="px-4 py-1 mb-6 text-sm font-medium text-blue-600 bg-blue-100 rounded-full inline-block"
-      >
-        Ce site n'est pas forcement une bonne référence
-      </p>
-      <!-- Main Heading -->
-      <h1 class="text-4xl font-bold text-gray-800 md:text-5xl">
-        L <font-awesome-icon icon="rocket" />s ESN
-        <span class="text-[#FF6500] font-semibold text-balance mb-9">
-          Tsara Karama</span
-        >
-        à Madagascar<br />
-        <span class="text-center text-3xl"
-          >Développeur Full Snack ? UI / Obelix Designer ?</span
-        >
-      </h1>
-      <!-- Description -->
-      <p class="mt-4 text-gray-600 md:text-lg text-balance">
-        Découvrez les meilleures entreprises de service numérique bien remuneré<br />
-      </p>
-      <!-- Search Bar -->
-      <div class="w-full max-w-lg mt-6">
-        <input
-          type="text"
-          placeholder="Rechercher un esn.."
-          class="w-full px-4 py-3 text-gray-800 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />
-      </div>
-    </div>
+    <div class="min-h-screen">
+        <!-- Hero Section -->
+        <div class="flex flex-col items-center px-6 py-20 text-center md:px-12">
+            <!-- Tagline -->
+            <p
+                class="px-4 py-1 mb-6 text-sm font-medium text-white rounded-full inline-block"
+            >
+                Ce site n'est pas forcement une bonne référence
+            </p>
+            <!-- Main Heading -->
+            <h1 class="text-4xl font-bold text-white md:text-5xl mt-10">
+                L <font-awesome-icon icon="rocket" />s ESN
+                <span class="text-[#d17624] font-semibold text-balance mb-9">
+                    Tsara Karama</span
+                >
+                à Madagascar<br />
+                <span class="text-center text-3xl"
+                    >Développeur Full Snack ? UI / Obelix Designer ?</span
+                >
+            </h1>
+            <!-- Description -->
+            <p class="mt-4 text-white md:text-lg text-balance">
+                Découvrez les meilleures entreprises de service numérique bien
+                remuneré<br />
+            </p>
+            <!-- Search Bar -->
+            <div class="w-full max-w-lg mt-6">
+                <input
+                    type="text"
+                    placeholder="Rechercher un esn.."
+                    class="w-full px-4 py-3 text-gray-800 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+            </div>
+        </div>
 
-    <!-- Categories Grid -->
-    <div class="grid w-full max-w-6xl gap-6 px-6 py-12 mx-auto md:grid-cols-3">
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-gray-800">Web Development</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Building and maintaining websites and web applications.
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-gray-800">Mobile Development</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Creating apps for mobile devices like smartphones and tablets.
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-gray-800">
-          AI and ML Development
-        </h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Building algorithms and models for tasks requiring human-like
-          cognition and learning.
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-gray-800">Desktop Development</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Designing and implementing software for native desktop systems.
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-gray-800">Game Development</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Crafting interactive games for various platforms, including consoles,
-          PCs, and mobile.
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-gray-800">
-          Cross-Platform Development
-        </h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Developing applications that work across multiple platforms with one
-          codebase.
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-gray-800">UI/UX Design</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          DWeb Design and User Expérience
-        </p>
-      </div>
+        <!-- Categories Grid -->
+        <CompaniesView />
     </div>
-  </div>
 </template>
