@@ -9,6 +9,11 @@ export default {
       gridTemplateColumns: {
         "70/30": "70% 28%",
       },
+      colors: {
+        mainBG: "#7ED4AD", 
+        blue: "#4A628A",
+        title: "#B03052"
+      },
     },
   },
   variants: {
