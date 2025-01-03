@@ -35,6 +35,12 @@ onMounted(async () => {
 <template>
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
+            v-if="state.isLoading"
+            class="flex items-center justify-center h-full"
+        >
+            <PulseLoader color="#d17624" />
+        </div>
+        <div
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
         >
             <template v-if="!state.isLoading && !state.error">
@@ -44,10 +50,6 @@ onMounted(async () => {
                     :company="company"
                 />
             </template>
-
-            <div v-if="state.isLoading" class="col-span-3 flex justify-center">
-                <PulseLoader color="#d17624" />
-            </div>
 
             <div v-if="state.error" class="col-span-3 text-red-500 text-center">
                 {{ state.error }}
