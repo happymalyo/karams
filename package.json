@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "vercel-build": "pnpm build",
+    "deploy": "vercel",
     "server": "json-server --watch src/companies.json --port 8000"
   },
   "dependencies": {
