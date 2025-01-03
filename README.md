@@ -1,6 +1,6 @@
-# ESN & KARAMA
+# KARAMS
 
-The best place to find a IT Job in Madagascar
+The best place to find well-paid jobs at companies.
 
 ## Project Setup
 
