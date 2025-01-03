@@ -15,7 +15,7 @@ import { RouterLink } from "vue-router";
                     class="h-10"
                 />
                 <RouterLink to="/" class="text-2xl font-bold text-white">
-                    E S N <span class="text-[#d17624]">& K A </span>R A M A
+                    K<span class="text-[#d17624]">ARA</span>MS
                 </RouterLink>
             </div>
 
@@ -33,7 +33,7 @@ import { RouterLink } from "vue-router";
                         class="px-6 py-2 border border-[#d17624] text-white font-semibold rounded hover:bg-[#d17624] hover:text-white hover:border-none transition duration-300"
                     >
                         <font-awesome-icon :icon="['fas', 'plus-circle']" />
-                        Ajouter un ESN
+                        Ajouter
                     </RouterLink>
                 </div>
             </nav>

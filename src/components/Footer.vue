@@ -7,9 +7,7 @@
             >
                 <!-- Branding -->
                 <div>
-                    <h3 class="text-white font-bold text-lg">
-                        E S N & K A R A M A
-                    </h3>
+                    <h3 class="text-white font-bold text-lg">KARAMS</h3>
                     <p class="mt-4 text-sm">
                         Trouvez facilement des entreprises à Madagascar, dans
                         divers secteurs, grâce à notre plateforme intuitive.
@@ -71,7 +69,7 @@
                 class="mt-6 flex flex-col md:flex-row items-center justify-between text-sm"
             >
                 <p class="text-gray-500">
-                    Copyright © 2025 ESN & KARAMA. Tous droits réservés.
+                    Copyright © 2025 KARAMS. Tous droits réservés.
                 </p>
             </div>
         </div>
