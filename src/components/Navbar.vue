@@ -20,9 +20,13 @@ import { RouterLink } from "vue-router";
             </div>
 
             <!-- Navigation Links -->
-            <nav class="flex items-center space-x-6">
+            <nav class="md:flex items-center space-x-6">
+                <font-awesome-icon
+                    class="md:hidden text-3xl text-white flex"
+                    icon="bars"
+                />
                 <!-- Login and Sign Up Buttons -->
-                <div class="ml-6 flex items-center space-x-4">
+                <div class="ml-6 md:flex items-center space-x-4 hidden">
                     <a
                         href="#login"
                         class="px-6 py-2 bg-[#d17624] text-white font-semibold rounded hover:bg-[#F18C2D] transition duration-300"
