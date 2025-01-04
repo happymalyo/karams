@@ -15,7 +15,8 @@ onMounted(async () => {
         // Select data from the company_details_view
         const { data, error } = await supabase
             .from("company_details_view")
-            .select("*");
+            .select("*")
+            .order("total_votes", { ascending: false });
 
         if (error) {
             throw error;
