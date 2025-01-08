@@ -3,5 +3,11 @@
     "env": {
       "ENABLE_PNPM": "true"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
