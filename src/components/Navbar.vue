@@ -27,8 +27,13 @@ const { user, isAuthenticated, signOut } = useAuth();
                 <!-- Login and Sign Up Buttons -->
                 <div class="ml-6 md:flex items-center space-x-4 hidden">
                     <template v-if="isAuthenticated">
-                        <span class="user-email">{{ user?.email }}</span>
-                        <button @click="signOut" class="btn-signout">
+                        <span class="user-email text-white">{{
+                            user?.email
+                        }}</span>
+                        <button
+                            @click="signOut"
+                            class="btn-signout text-red-500"
+                        >
                             Sign Out
                         </button>
                     </template>
