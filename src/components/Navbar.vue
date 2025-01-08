@@ -1,5 +1,11 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { ref } from "vue";
+import { useAuth } from "@/composables/useAuth";
+import LoginModal from "@/components/auth/LoginModal.vue";
+
+const showLoginModal = ref(false);
+const { user, isAuthenticated, signOut } = useAuth();
 </script>
 
 <template>
@@ -9,14 +15,7 @@ import { RouterLink } from "vue-router";
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo Section -->
             <div class="flex items-center space-x-2">
-                <img
-                    src="https://via.placeholder.com/40"
-                    alt="Logo"
-                    class="h-10"
-                />
-                <RouterLink to="/" class="text-2xl font-bold text-white">
-                    K<span class="text-[#d17624]">ARA</span>MS
-                </RouterLink>
+                <img src="/assets/logo-karams.png" alt="Logo" class="h-10" />
             </div>
 
             <!-- Navigation Links -->
@@ -27,14 +26,22 @@ import { RouterLink } from "vue-router";
                 />
                 <!-- Login and Sign Up Buttons -->
                 <div class="ml-6 md:flex items-center space-x-4 hidden">
-                    <a
-                        href="#login"
-                        class="px-6 py-2 bg-[#d17624] text-white font-semibold rounded hover:bg-[#F18C2D] transition duration-300"
-                        >Se connecter</a
+                    <template v-if="isAuthenticated">
+                        <span class="user-email">{{ user?.email }}</span>
+                        <button @click="signOut" class="btn-signout">
+                            Sign Out
+                        </button>
+                    </template>
+                    <button
+                        v-else
+                        @click="showLoginModal = true"
+                        class="btn-signin px-6 py-2 bg-[#FE1F99] text-white hover:text-[#1a1a1a] font-semibold rounded"
                     >
+                        Se connecter
+                    </button>
                     <RouterLink
                         to="/add-company"
-                        class="px-6 py-2 border border-[#d17624] text-white font-semibold rounded hover:bg-[#d17624] hover:text-white hover:border-none transition duration-300"
+                        class="px-6 py-2 border border-[#FE1F99] text-white hover:text-[#FE1F99] font-semibold rounded"
                     >
                         <font-awesome-icon :icon="['fas', 'plus-circle']" />
                         Ajouter
@@ -42,5 +49,6 @@ import { RouterLink } from "vue-router";
                 </div>
             </nav>
         </div>
+        <LoginModal v-model="showLoginModal" />
     </header>
 </template>

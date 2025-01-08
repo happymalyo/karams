@@ -6,6 +6,7 @@ import {
   faRocket,
   faComments,
   faBars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { createApp } from "vue";
@@ -14,7 +15,7 @@ import App from "./App.vue";
 
 const app = createApp(App);
 // Config Font awesome
-library.add(faPlusCircle, faRocket, faComments, faBars);
+library.add(faPlusCircle, faRocket, faComments, faBars, faXmark);
 app.component("font-awesome-icon", FontAwesomeIcon);
 
 app.use(router);

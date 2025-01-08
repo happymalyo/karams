@@ -19,10 +19,10 @@ import CompaniesView from "@/views/CompaniesView.vue";
                 <span class="text-center text-xl md:text-3xl"
                     >Mba tsara
                     <span
-                        class="text-[#d17624] font-semibold text-balance mb-9"
+                        class="text-[#FE1F99] font-semibold text-balance mb-9"
                     >
-                        Karams </span
-                    >ve ao ? 🤔</span
+                        Karama </span
+                    >ve ao ?</span
                 >
             </h1>
             <!-- Description -->
