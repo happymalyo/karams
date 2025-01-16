@@ -1,11 +1,46 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { ref } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { useAuth } from "@/composables/useAuth";
 import LoginModal from "@/components/auth/LoginModal.vue";
+import { supabase } from "@/lib/supabaseClient";
 
 const showLoginModal = ref(false);
-const { user, isAuthenticated, signOut } = useAuth();
+const { user, isAuthenticated, loading, signOut } = useAuth();
+const profile = ref(null);
+//TODO : Make it in a separated file. This is not a good practice.
+const fetchUserProfile = async (userId) => {
+    try {
+        loading.value = true;
+        const { data, error: fetchError } = await supabase
+            .from("profiles")
+            .select("*")
+            .eq("id", userId)
+            .single();
+        if (fetchError) throw fetchError;
+        profile.value = data;
+    } catch (e) {
+        console.error("Error fetching profile", e);
+    } finally {
+        loading.value = false;
+    }
+};
+
+// Watch for changes in the authenticated user
+watch(user, (newUser) => {
+    if (newUser) {
+        fetchUserProfile(newUser.id); // Fetch profile when a user logs in
+    } else {
+        profile.value = null; // Clear profile when user logs out
+    }
+});
+
+// Fetch profile on initial load if user is already logged in
+onMounted(() => {
+    if (user.value) {
+        fetchUserProfile(user.value.id);
+    }
+});
 </script>
 
 <template>
@@ -25,11 +60,13 @@ const { user, isAuthenticated, signOut } = useAuth();
                     icon="bars"
                 />
                 <!-- Login and Sign Up Buttons -->
-                <div class="ml-6 md:flex items-center space-x-4 hidden">
+                <div class="ml-6 md:flex tems-center space-x-4 hidden">
                     <template v-if="isAuthenticated">
-                        <span class="user-email text-white">{{
-                            user?.email
-                        }}</span>
+                        <img
+                            :src="profile?.avatar_url"
+                            class="rounded-full w-10 h-10"
+                            alt="User Avatar"
+                        />
                         <button
                             @click="signOut"
                             class="btn-signout text-red-500"

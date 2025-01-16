@@ -3,6 +3,7 @@ import { supabase } from "@/lib/supabaseClient";
 
 export function useAuth() {
   const user = ref(null);
+  const profile = ref(null);
   const loading = ref(false);
   const error = ref(null);
 
